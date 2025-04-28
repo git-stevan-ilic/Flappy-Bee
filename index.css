@@ -10,6 +10,9 @@
 }
 
 /*--Initial----------------------------------------------------------------------------------------------------------------------------------------*/
+*{
+    touch-action:manipulation;
+}
 body{
     background-image:linear-gradient(rgb(0,150,255),rgb(150,215,255));
     font-family:"Helvetica";
