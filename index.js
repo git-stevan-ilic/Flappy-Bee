@@ -88,7 +88,7 @@ function backLoop(currTime,prevTime){
             else{
                 for(let i = 0; i < clouds.length; i++){
                     clouds[i].x -= window.innerWidth*0.001*(10+clouds[i].s)/10;
-                    if(clouds[i].x < -window.innerWidth*0.1) clouds.splice(i,1);
+                    if(clouds[i].x < -window.innerHeight*0.15) clouds.splice(i,1);
                 }
                 if(clouds.length < 10){
                     let newCloudIndex = random(1,4);
@@ -324,6 +324,7 @@ window.onkeydown = (e)=>{
     }
 }
 window.onclick = (e)=>{
+    e.preventDefault();
     if(!game.started && !game.over && e.key === " ") startGameLoop();
     else if(game.started) jump();
 }
