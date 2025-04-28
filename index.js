@@ -323,3 +323,7 @@ window.onkeydown = (e)=>{
         }
     }
 }
+window.ontouchstart = (e)=>{
+    if(!game.started && !game.over && e.key === " ") startGameLoop();
+    else if(game.started) jump();
+}
