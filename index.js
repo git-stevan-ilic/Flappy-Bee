@@ -325,7 +325,6 @@ window.onkeydown = (e)=>{
 }
 window.ontouchstart = (e)=>{
     e.preventDefault();
-    alert(0)
-    if(!game.started && !game.over && e.key === " ") startGameLoop();
+    if(!game.started && !game.over) startGameLoop();
     else if(game.started) jump();
 }
