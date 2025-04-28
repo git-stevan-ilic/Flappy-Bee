@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Flappy Bee</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="icon" href="images/bee1.png">
+    </head>
+    <body>
+        <div class="loadingScreen"></div>
+        <canvas id="backgroundCanvas"></canvas>
+        <div class="gameWindow">
+            <canvas id="gameCanvas"></canvas>
+            <div class="gameText" id="pausedText">Paused</div>
+            <div class="gameText" id="gameInfo">Press Space to Jump<br><br>Press P to pause</div>
+            <div class="gameScore"></div>
+        </div>
+        <div class="menuWindow" id="gameOverWindow">
+            <div class="menuTitle">Game Over</div>
+            <div class="button" id="gameR">Restart</div>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
