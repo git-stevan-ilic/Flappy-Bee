@@ -246,7 +246,7 @@ function drawGame(ctx){
     
     ctx.beginPath();
     ctx.save();
-    ctx.translate(player.x-game.adjustLeft+playerWidth/2,player.y+playerHeight/2);
+    ctx.translate(player.x-game.adjustLeft,player.y+playerHeight/2);
     ctx.rotate(player.angle);
     ctx.imageSmoothingEnabled = false;
     ctx.drawImage(playerImg,-playerWidth/2,-playerHeight/2,playerWidth,playerHeight);
@@ -264,7 +264,7 @@ function collision(){
         let playerHeight = window.innerHeight*0.1;
         let playerWidth = playerHeight*0.95;
 
-        let playerCircle = {x:player.x-game.adjustLeft+playerWidth/2,y:player.y+playerHeight*0.55,r:playerWidth*0.32};
+        let playerCircle = {x:player.x-game.adjustLeft,y:player.y+playerHeight*0.55,r:playerWidth*0.32};
         let obsRect1 = {x:obs.x-game.adjustLeft,y:0,w:playerWidth,h:height1};
         let obsRect2 = {x:obs.x-game.adjustLeft,y:height1+gap,w:playerWidth,h:height2};
         if(rectCircleCollision(playerCircle,obsRect1) || rectCircleCollision(playerCircle,obsRect2)) gameOver();
