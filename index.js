@@ -171,7 +171,7 @@ function gameLoop(currTime,prevTime,ctx){
 function updateGame(elapsedTime){
     game.tick++;
     if(game.tick >= 100) game.tick = 0;
-    if(game.tick % 10 === 0){
+    if(game.tick % 5 === 0){
         player.tick += player.dir;
         if(player.tick > 2) player.dir = -1;
         else if(player.tick < 2) player.dir = 1;
@@ -199,8 +199,8 @@ function updateGame(elapsedTime){
         }
     }
     let distX = elapsedTime/2;
-    game.adjustLeft += distX;
-    player.x += distX;
+    game.adjustLeft += distX/2;
+    player.x += distX/2;
 
     let gravity = window.innerHeight*0.0005;
     player.y += gravity+player.f;
